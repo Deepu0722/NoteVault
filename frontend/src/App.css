@@ -1,0 +1,107 @@
+body{
+  margin: 20px;
+  background-color: rgb(246, 243, 240);
+  background-image: url(./assets/NOTE_BG2.png);
+  background-size:cover; /* This ensures that the image covers the entire background */
+  background-position: center; /* This centers the image */
+  background-repeat: no-repeat; /* This prevents the image from repeating */
+}
+.app-container{
+  grid-template-columns: 1fr;
+}
+@media (min-width: 600px){
+  .app-container{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+  }
+}
+.notes-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 20px;
+
+}
+.note-item{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(164, 220, 205);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.note-item:nth-child(odd) {
+  background-color: rgb(164, 220, 205);
+}
+.note-item:nth-child(even){
+  background-color: pink;
+}
+
+.note-header{
+  display: flex;
+  justify-content: flex-end;
+}
+.note-header button{
+ font-size: 16px;
+ background: transparent;
+ border: none;
+ cursor: pointer;
+ max-width: fit-content;
+ font-weight: bold ;
+}
+
+h2{
+  margin: 0;
+}
+
+.note-form{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+textarea, input {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.note-form button {
+  border-radius: 5px;
+  background-color: rgb(68 187 140);
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: rgb(17, 22, 22);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.note-form button:hover{
+  background-color: rgb(77, 229, 168);
+  cursor: pointer;
+}
+
+textarea, input{
+  background-image: url('./assets/back.jpg');
+  background-size: cover; /* This ensures that the image covers the entire background */
+  background-position: center; /* This centers the image */
+  background-repeat: no-repeat; /* This prevents the image from repeating */
+}
+
+.note-edit-buttons{
+  display: flex;
+  gap: 5px;
+  justify-items: space-evenly;
+}
+.note-edit-buttons button{
+  flex:1;
+}
+.note-edit-buttons button:last-of-type {
+  background-color: brown;
+  color:white;
+}
